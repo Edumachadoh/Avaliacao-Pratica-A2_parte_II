@@ -7,7 +7,8 @@ public class Client {
         ProcessadorTransacoes processador = new PagamentoAdapter(sistemaLegado, "LOJA_01");
 
         System.out.println("[Cliente] Enviando pagamento de 1600 BRL...");
-        // O cliente usa o método moderno com "BRL"
+
+        // O cliente usa o método autorizar com "BRL"
         RespostaAutorizacao resposta = processador.autorizar(1600.0, "1234-5678", "BRL");
         
         System.out.println(resposta);
@@ -16,7 +17,7 @@ public class Client {
 
         System.out.println("[Cliente] Enviando pagamento de 50 USD...");
         
-        // O cliente usa o método moderno com "USD"
+        // O cliente usa o método autorizar com "USD"
         RespostaAutorizacao respostaUsd = processador.autorizar(50.0, "9999-8888", "USD");
 
         System.out.println(respostaUsd);

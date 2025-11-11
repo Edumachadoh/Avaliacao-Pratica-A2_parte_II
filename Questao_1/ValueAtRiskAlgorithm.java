@@ -25,7 +25,6 @@ public class ValueAtRiskAlgorithm implements Algorithm{
         // Multiplicar por -1 para tornar a perda em realmente uma perda e então multiplicar por 100 para mostrar em porcentagem
         double perdaEmPercentual = var * -100;
 
-        // Usamos println para ser mais simples que o 'printf'
         System.out.println("Algoritmo Value at Risk (VaR): ");
         System.out.println("Com 95% de confiança, a perda máxima esperada é: " + perdaEmPercentual + "%");
     }

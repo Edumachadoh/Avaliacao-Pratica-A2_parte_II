@@ -26,7 +26,6 @@ public class StressTestingAlgorith implements Algorithm{
         double perdaEmPercentual = piorDia * -100;
 
         System.out.println("Algoritmo de Stress Testing: ");
-        System.out.println("Cenário: 'Repetir o pior dia da história'");
         System.out.println("Resultado simulado (pior perda): " + perdaEmPercentual + "%");
     }
     

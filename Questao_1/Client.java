@@ -20,19 +20,20 @@ public class Client {
         ));
 
 
-        // 2. Iniciar o contexto
+        // Iniciar o contexto
         Context context = new Context(new ValueAtRiskAlgorithm());
         
-        // 3. Executar os cálculos
-        // Os resultados agora serão sempre os mesmos
+        // primeiro calculo com o algoritmo de ValueAtRiskAlgorithm
         System.out.println("Executando o primeiro algoritmo (VaR):");
         context.calculate(data);
 
+        // trocar o contexto para o calculo com o algoritmo de ExpectedShortfallAlgorithm
         System.out.println("\n--- Trocando de algoritmo ---");
         context.setAlgorithm(new ExpectedShortfallAlgorithm());
         System.out.println("Executando o segundo algoritmo (ES):");
         context.calculate(data);
         
+        // trocar o contexto para o calculo com o algoritmo de StressTestingAlgorith
         System.out.println("\n--- Trocando de algoritmo ---");
         context.setAlgorithm(new StressTestingAlgorith());
         System.out.println("Executando o terceiro algoritmo (Stress):");
